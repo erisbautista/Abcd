@@ -24,3 +24,29 @@ C:\Users\jemelle\source\repos\VotingSystemExperiment\VotingSystemExperiment\obj\
 C:\Users\jemelle\source\repos\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.candidate.resources
 C:\Users\jemelle\source\repos\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Login.resources
 C:\Users\jemelle\source\repos\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.AddCandidate.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.exe.config
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.exe
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.pdb
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.xml
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\MySql.Data.dll
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\Google.Protobuf.dll
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\MySql.Data.xml
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbprojAssemblyReference.cache
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.AddCandidate.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Admin_View.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.candidate.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Login.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.VoteRate.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.AdminViewer.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Modify.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.RegisterForm.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.RegisterVoter.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.VotingView.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.PartyListView.resources
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbproj.GenerateResource.cache
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbproj.CoreCompileInputs.cache
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbproj.CopyComplete
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.exe
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.xml
+C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.pdb
