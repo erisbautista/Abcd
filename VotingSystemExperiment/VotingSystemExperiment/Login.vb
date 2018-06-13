@@ -4,6 +4,10 @@ Public Class Login
     Private conn As MySqlConnection
     Private READER As MySqlDataReader
     Private comm As MySqlCommand
+    Public id As String
+    Public id2 As String
+    Public id3 As String
+    Public id4 As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         RegisterForm.Show()
     End Sub
@@ -105,5 +109,8 @@ Public Class Login
         Finally
             conn.Dispose()
         End Try
+        TextBox1.Text = id
+        VotingView.id2 = id
+
     End Sub
 End Class
