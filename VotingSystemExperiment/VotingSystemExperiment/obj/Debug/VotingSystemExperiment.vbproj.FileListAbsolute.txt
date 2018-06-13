@@ -50,3 +50,30 @@ C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExp
 C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.exe
 C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.xml
 C:\Users\Moises Ramirez\Source\Repos\Abcd\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.pdb
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.exe.config
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.exe
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.pdb
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\VotingSystemExperiment.xml
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\MySql.Data.dll
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\Google.Protobuf.dll
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\bin\Debug\MySql.Data.xml
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbprojAssemblyReference.cache
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.AddCandidate.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Admin_View.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.candidate.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Login.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.VoteRate.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.AdminViewer.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Modify.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.RegisterForm.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.RegisterVoter.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.VotingView.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.PartyListView.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbproj.GenerateResource.cache
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbproj.CoreCompileInputs.cache
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.vbproj.CopyComplete
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.exe
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.xml
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.pdb
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.UpdateCandidate.resources

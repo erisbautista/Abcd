@@ -6,6 +6,7 @@ Public Class AddCandidate
     Private READER As MySqlDataReader
     Private pos As String
     Private part As String
+
     Private Sub AddCandidate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim sql As String
         Dim dsToBeFilled As New DataSet
@@ -78,7 +79,7 @@ Public Class AddCandidate
                         pos = row.Item("c_pos").ToString()
                     Next
                 Else
-                    MessageBox.Show("WRONG USERNAME OR PASSWORD")
+
                 End If
                 conn.Close()
             Catch ex As Exception
@@ -104,7 +105,7 @@ Public Class AddCandidate
                         part = row.Item("ID").ToString()
                     Next
                 Else
-                    MessageBox.Show("WRONG USERNAME OR PASSWORD")
+
                 End If
                 conn.Close()
             Catch ex As Exception
@@ -119,7 +120,8 @@ Public Class AddCandidate
                                      SslMode=none"
                 conn.Open()
                 com.Connection = conn
-                com.CommandText = "INSERT INTO `tbl_candidates`(`c_name`, `c_pos`, `p_name`,`profile`) VALUES (concat('" & TxtBoxLN.Text & "', + ' ', '" & TxtBoxFn.Text & "', + ' ', '" & TxtBoxMN.Text & "'),'" & pos & "','" & part & "','" & TextBox4.Text & "')"
+                com.CommandText = "INSERT INTO `tbl_candidates`(`c_name`, `c_pos`, `p_name`,`profile`) VALUES (concat('" & TxtBoxLN.Text & "', + ' ', '" & TxtBoxFn.Text & "', + ' ', '" & TxtBoxMN.Text & "'),'" & pos & "','" & part & "','" & TextBox4.Text & "',@photo)"
+                com.Parameters.AddWithValue("@photo", PictureBox1.Image)
                 com.ExecuteNonQuery()
                 MsgBox("Successfully Added")
             Catch ex As Exception
@@ -129,4 +131,26 @@ Public Class AddCandidate
             End Try
         End If
     End Sub
+
+    Private Sub BttnBrowse_Click(sender As Object, e As EventArgs) Handles BttnBrowse.Click
+        Dim opf As New OpenFileDialog
+        opf.Filter = "Choose Image((*.JPG;,*.PNG;,*.GIF)|*.jpg;,*.png;,*.gif)"
+        If opf.ShowDialog = Windows.Forms.DialogResult.OK Then
+            PictureBox1.Image = Image.FromFile(opf.FileName)
+        End If
+    End Sub
+
+    Private Sub BttnClear_Click(sender As Object, e As EventArgs) Handles BttnClear.Click
+        Dim result = MsgBox("ARE YOU  USE YOU WANT TO CLEAR ALL THE INFORMATION INSERTED?", MessageBoxButtons.YesNo, " CLEARING CANNOT BE UNDO!")
+        If result = DialogResult.Yes Then
+            PictureBox1.Image = Nothing
+            TextBox4.Text = Nothing
+            TxtBoxFn.Text = Nothing
+            TxtBoxLN.Text = Nothing
+            TxtBoxMN.Text = Nothing
+            ComboBox1.Text = Nothing
+            ComboBox2.Text = Nothing
+        End If
+    End Sub
+
 End Class

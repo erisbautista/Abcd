@@ -3,6 +3,8 @@ Public Class candidate
     Private conn As New MySqlConnection
     Private com As New MySqlCommand
     Private adapt As New MySqlDataAdapter
+    Public z As String
+    Public y As String
     Private Sub candidate_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim query As String
         Dim data As New DataTable
@@ -248,6 +250,8 @@ Public Class candidate
         Dim i As Integer
         i = DataGridView1.CurrentRow.Index
         TextBox2.Text = DataGridView1.Item(0, i).Value
+        y = TextBox2.Text
+        UpdateCandidate.z = y
     End Sub
 
     Private Sub RegisterBttn_Click(sender As Object, e As EventArgs) Handles RegisterBttn.Click
@@ -259,7 +263,6 @@ Public Class candidate
     End Sub
 
     Private Sub ModifyBttn_Click(sender As Object, e As EventArgs) Handles ModifyBttn.Click
-        AddCandidate.Show()
+        UpdateCandidate.Show()
     End Sub
-
 End Class

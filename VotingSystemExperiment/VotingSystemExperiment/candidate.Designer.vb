@@ -49,6 +49,7 @@ Partial Class candidate
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(337, 134)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(377, 276)
         Me.DataGridView1.TabIndex = 0
         '
@@ -90,7 +91,9 @@ Partial Class candidate
         '
         'ComboBox2
         '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {""})
         Me.ComboBox2.Location = New System.Drawing.Point(182, 167)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
@@ -98,7 +101,9 @@ Partial Class candidate
         '
         'ComboBox1
         '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {""})
         Me.ComboBox1.Location = New System.Drawing.Point(184, 98)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
@@ -186,7 +191,7 @@ Partial Class candidate
         Me.Panel2.Controls.Add(Me.Label4)
         Me.Panel2.Location = New System.Drawing.Point(-2, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(737, 63)
+        Me.Panel2.Size = New System.Drawing.Size(737, 107)
         Me.Panel2.TabIndex = 0
         '
         'Label4

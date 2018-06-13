@@ -76,6 +76,8 @@ Public Class Login
                                     If count2 = 1 Then
                                         MsgBox("PLEASE WAIT FOR THE ADMIN TO ACTIVATE YOUR ACCOUNT BEFORE YOU CAN USE YOUR ACCOUNT")
                                     Else
+                                        TextBox1.Text = Nothing
+                                        TextBox2.Text = Nothing
                                         VotingView.Show()
                                     End If
                                     conn.Close()
@@ -85,6 +87,8 @@ Public Class Login
                                     conn.Dispose()
                                 End Try
                             Else
+                                TextBox1.Text = Nothing
+                                TextBox2.Text = Nothing
                                 Admin_View.Show()
                             End If
                             conn.Close()

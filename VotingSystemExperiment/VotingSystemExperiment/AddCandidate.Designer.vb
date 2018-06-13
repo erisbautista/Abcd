@@ -74,6 +74,7 @@ Partial Class AddCandidate
         Me.PictureBox1.Location = New System.Drawing.Point(15, 173)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(124, 145)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 1
         Me.PictureBox1.TabStop = False
         '
@@ -184,7 +185,7 @@ Partial Class AddCandidate
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(100, 23)
         Me.Label6.TabIndex = 4
-        Me.Label6.Text = "LAST NAME :"
+        Me.Label6.Text = "PROFILE  :"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label7
