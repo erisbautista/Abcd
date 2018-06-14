@@ -120,7 +120,7 @@ Public Class AddCandidate
                                      SslMode=none"
                 conn.Open()
                 com.Connection = conn
-                com.CommandText = "INSERT INTO `tbl_candidates`(`c_name`, `c_pos`, `p_name`,`profile`) VALUES (concat('" & TxtBoxLN.Text & "', + ' ', '" & TxtBoxFn.Text & "', + ' ', '" & TxtBoxMN.Text & "'),'" & pos & "','" & part & "','" & TextBox4.Text & "',@photo)"
+                com.CommandText = "INSERT INTO `tbl_candidates`(`c_name`, `c_pos`, `p_name`,`profile`,`photo`) VALUES (concat('" & TxtBoxFn.Text & "', + ' ', '" & TxtBoxMN.Text & "', + ' ', '" & TxtBoxLN.Text & "'),'" & pos & "','" & part & "','" & TextBox4.Text & "',@photo)"
                 com.Parameters.AddWithValue("@photo", PictureBox1.Image)
                 com.ExecuteNonQuery()
                 MsgBox("Successfully Added")

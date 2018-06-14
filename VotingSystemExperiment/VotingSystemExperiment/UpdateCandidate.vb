@@ -164,14 +164,26 @@ Public Class UpdateCandidate
         Finally
             conn.Close()
         End Try
-        Dim strArr() As String
-        Dim count As Integer
-        strArr = z.Split(" ")
-        For count = 0 To strArr.Length - 1
-        Next
-        TxtBoxFn.Text = strArr(1)
-        TxtBoxLN.Text = strArr(0)
-        TxtBoxMN.Text = strArr(2)
+        Dim strArr As String()
+        If z.Contains(" ") Then
+            strArr = z.Split(" ")
+            If strArr.Length = 3 Then
+                TxtBoxFn.Text = strArr(0)
+                TxtBoxLN.Text = strArr(2)
+                TxtBoxMN.Text = strArr(1)
+            ElseIf strArr.Length = 2 Then
+                TxtBoxFn.Text = strArr(0)
+                TxtBoxLN.Text = strArr(1)
+            ElseIf strArr.Length = 4 Then
+                TxtBoxFn.Text = strArr(0) & " " & strArr(1)
+                TxtBoxLN.Text = strArr(3)
+                TxtBoxMN.Text = strArr(2)
+            End If
+        Else
+                TxtBoxFn.Text = z
+            TxtBoxLN.Text = ""
+            TxtBoxMN.Text = ""
+        End If
     End Sub
 
     Private Sub BttnClear_Click(sender As Object, e As EventArgs) Handles BttnClear.Click
