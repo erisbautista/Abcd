@@ -77,3 +77,4 @@ C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperim
 C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.xml
 C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\VotingSystemExperiment.pdb
 C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.UpdateCandidate.resources
+C:\Users\jemelle\Desktop\github\Abcd2\VotingSystemExperiment\VotingSystemExperiment\obj\Debug\WindowsApp1.ShowResult.resources

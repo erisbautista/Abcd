@@ -112,6 +112,13 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SelectCode.vb" />
+    <Compile Include="ShowResult.Designer.vb">
+      <DependentUpon>ShowResult.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShowResult.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UpdateCandidate.Designer.vb">
       <DependentUpon>UpdateCandidate.vb</DependentUpon>
     </Compile>
@@ -192,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowResult.resx">
+      <DependentUpon>ShowResult.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateCandidate.resx">
       <DependentUpon>UpdateCandidate.vb</DependentUpon>

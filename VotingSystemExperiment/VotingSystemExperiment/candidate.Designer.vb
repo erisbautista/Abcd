@@ -27,8 +27,8 @@ Partial Class candidate
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ModifyBttn = New System.Windows.Forms.Button()
@@ -50,7 +50,9 @@ Partial Class candidate
         Me.DataGridView1.Location = New System.Drawing.Point(337, 134)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(377, 276)
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(444, 276)
         Me.DataGridView1.TabIndex = 0
         '
         'Panel1
@@ -58,8 +60,8 @@ Partial Class candidate
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.ComboBox2)
         Me.Panel1.Controls.Add(Me.ComboBox1)
+        Me.Panel1.Controls.Add(Me.ComboBox2)
         Me.Panel1.Controls.Add(Me.Button2)
         Me.Panel1.Controls.Add(Me.TextBox2)
         Me.Panel1.Controls.Add(Me.ModifyBttn)
@@ -89,34 +91,36 @@ Partial Class candidate
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "POSITION"
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Items.AddRange(New Object() {""})
-        Me.ComboBox2.Location = New System.Drawing.Point(182, 167)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 8
-        '
         'ComboBox1
         '
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {""})
-        Me.ComboBox1.Location = New System.Drawing.Point(184, 98)
+        Me.ComboBox1.Location = New System.Drawing.Point(182, 167)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
         Me.ComboBox1.TabIndex = 8
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Items.AddRange(New Object() {""})
+        Me.ComboBox2.Location = New System.Drawing.Point(184, 98)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
+        Me.ComboBox2.TabIndex = 8
         '
         'Button2
         '
         Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.Location = New System.Drawing.Point(274, 230)
+        Me.Button2.Location = New System.Drawing.Point(200, 230)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(40, 40)
+        Me.Button2.Size = New System.Drawing.Size(114, 40)
         Me.Button2.TabIndex = 7
+        Me.Button2.Text = "REFRESH  "
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.Button2.UseVisualStyleBackColor = True
         '
         'TextBox2
@@ -189,9 +193,10 @@ Partial Class candidate
         Me.Panel2.BackgroundImage = CType(resources.GetObject("Panel2.BackgroundImage"), System.Drawing.Image)
         Me.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Location = New System.Drawing.Point(-2, 0)
+        Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
+        Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(737, 107)
+        Me.Panel2.Size = New System.Drawing.Size(793, 107)
         Me.Panel2.TabIndex = 0
         '
         'Label4
@@ -211,7 +216,7 @@ Partial Class candidate
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(737, 422)
+        Me.ClientSize = New System.Drawing.Size(793, 422)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Panel2)
@@ -241,8 +246,8 @@ Partial Class candidate
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents ComboBox2 As ComboBox
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label4 As Label
 End Class

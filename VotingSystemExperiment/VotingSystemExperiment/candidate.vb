@@ -41,7 +41,7 @@ Public Class candidate
             adapt.SelectCommand = com
             adapt.Fill(dsToBeFilled)
             For Each row As DataRow In dsToBeFilled.Tables(0).Rows
-                ComboBox2.Items.Add(row.Item("Name").ToString())
+                ComboBox1.Items.Add(row.Item("Name").ToString())
             Next
         Catch myerror As MySqlException
             MessageBox.Show("Error connecting to the database: " & myerror.Message)
@@ -63,7 +63,7 @@ Public Class candidate
             adapt.SelectCommand = com
             adapt.Fill(dsToBeFilled1)
             For Each row As DataRow In dsToBeFilled1.Tables(0).Rows
-                ComboBox1.Items.Add(row.Item("PartyListName").ToString())
+                ComboBox2.Items.Add(row.Item("PartyListName").ToString())
             Next
         Catch myerror As MySqlException
             MessageBox.Show("Error connecting to the database: " & myerror.Message)
@@ -72,18 +72,19 @@ Public Class candidate
         End Try
     End Sub
 
-    Private Sub ComboBox1_TextChanged(sender As Object, e As EventArgs) Handles ComboBox1.TextChanged
+    Private Sub ComboBox1_TextChanged(sender As Object, e As EventArgs) Handles ComboBox2.TextChanged
         Dim query As String
         Dim data As New DataTable
         Dim source As New BindingSource
-        If ComboBox1.Text = Nothing Then
+        If ComboBox1.Text = "" And ComboBox2.Text <> Nothing Then
             Try
                 conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
                 conn.Open()
-                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName 
+                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName,tbl_candidates.vote 
             FROM ((tbl_candidates 
             INNER JOIN position On position.c_pos = tbl_candidates.c_pos) 
-            INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)"
+            INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)
+            where partylist.PartyListName='" & ComboBox2.Text & "'"
                 com = New MySqlCommand(query, conn)
                 adapt.SelectCommand = com
                 adapt.Fill(data)
@@ -95,15 +96,15 @@ Public Class candidate
             Catch ex As Exception
                 MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
             End Try
-        ElseIf ComboBox2.Text = Nothing Then
+        ElseIf ComboBox2.Text = "" And ComboBox1.Text <> Nothing Then
             Try
                 conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
                 conn.Open()
-                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName 
+                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName,tbl_candidates.vote
                          FROM ((tbl_candidates 
                          INNER JOIN position On position.c_pos = tbl_candidates.c_pos) 
                          INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)
-                         where partylist.`PartyListName`='" & ComboBox1.Text & "'"
+                         where position.Name='" & ComboBox1.Text & "'"
                 com = New MySqlCommand(query, conn)
                 adapt.SelectCommand = com
                 adapt.Fill(data)
@@ -112,6 +113,24 @@ Public Class candidate
                 adapt.Update(data)
                 conn.Close()
 
+            Catch ex As Exception
+                MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
+            End Try
+        ElseIf ComboBox1.Text = Nothing And ComboBox2.Text = Nothing Then
+            Try
+                conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
+                conn.Open()
+                query = "SELECT tbl_candidates.c_name, position.Name, partylist.PartyListName,tbl_candidates.vote
+                    FROM ((tbl_candidates 
+                    INNER JOIN position ON position.c_pos = tbl_candidates.c_pos) 
+                    INNER JOIN partylist on partylist.ID = tbl_candidates.p_name)"
+                com = New MySqlCommand(query, conn)
+                adapt.SelectCommand = com
+                adapt.Fill(data)
+                source.DataSource = data
+                DataGridView1.DataSource = source
+                adapt.Update(data)
+                conn.Close()
             Catch ex As Exception
                 MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
             End Try
@@ -119,11 +138,11 @@ Public Class candidate
             Try
                 conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
                 conn.Open()
-                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName 
-                         FROM ((tbl_candidates 
-                         INNER JOIN position On position.c_pos = tbl_candidates.c_pos) 
-                         INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)
-                         where partylist.`PartyListName`='" & ComboBox1.Text & "' and position.Name='" & ComboBox2.Text & "'"
+                query = "SELECT tbl_candidates.c_name, position.Name, partylist.PartyListName, tbl_candidates.vote
+                    FROM ((tbl_candidates 
+                    INNER JOIN position ON position.c_pos = tbl_candidates.c_pos) 
+                    INNER JOIN partylist on partylist.ID = tbl_candidates.p_name)
+                    where position.Name='" & ComboBox1.Text & "' and partylist.PartyListName='" & ComboBox2.Text & "'"
                 com = New MySqlCommand(query, conn)
                 adapt.SelectCommand = com
                 adapt.Fill(data)
@@ -131,25 +150,25 @@ Public Class candidate
                 DataGridView1.DataSource = source
                 adapt.Update(data)
                 conn.Close()
-
             Catch ex As Exception
                 MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
             End Try
         End If
     End Sub
 
-    Private Sub ComboBox2_TextChanged(sender As Object, e As EventArgs) Handles ComboBox2.TextChanged
+    Private Sub ComboBox2_TextChanged(sender As Object, e As EventArgs) Handles ComboBox1.TextChanged
         Dim query As String
         Dim data As New DataTable
         Dim source As New BindingSource
-        If ComboBox2.Text = Nothing Then
+        If ComboBox1.Text = "" And ComboBox2.Text <> Nothing Then
             Try
                 conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
                 conn.Open()
-                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName 
+                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName,tbl_candidates.vote 
             FROM ((tbl_candidates 
             INNER JOIN position On position.c_pos = tbl_candidates.c_pos) 
-            INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)"
+            INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)
+            where partylist.PartyListName='" & ComboBox2.Text & "'"
                 com = New MySqlCommand(query, conn)
                 adapt.SelectCommand = com
                 adapt.Fill(data)
@@ -161,15 +180,15 @@ Public Class candidate
             Catch ex As Exception
                 MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
             End Try
-        ElseIf ComboBox1.Text = Nothing Then
+        ElseIf ComboBox2.Text = "" And ComboBox1.Text <> Nothing Then
             Try
                 conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
                 conn.Open()
-                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName 
+                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName, tbl_candidates.vote 
                          FROM ((tbl_candidates 
                          INNER JOIN position On position.c_pos = tbl_candidates.c_pos) 
                          INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)
-                         where partylist.`PartyListName`='" & ComboBox1.Text & "'"
+                         where position.Name='" & ComboBox1.Text & "'"
                 com = New MySqlCommand(query, conn)
                 adapt.SelectCommand = com
                 adapt.Fill(data)
@@ -177,7 +196,24 @@ Public Class candidate
                 DataGridView1.DataSource = source
                 adapt.Update(data)
                 conn.Close()
-
+            Catch ex As Exception
+                MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
+            End Try
+        ElseIf ComboBox1.Text = Nothing And ComboBox2.Text = Nothing Then
+            Try
+                conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
+                conn.Open()
+                query = "SELECT tbl_candidates.c_name, position.Name, partylist.PartyListName, tbl_candidates.vote
+                    FROM ((tbl_candidates 
+                    INNER JOIN position ON position.c_pos = tbl_candidates.c_pos) 
+                    INNER JOIN partylist on partylist.ID = tbl_candidates.p_name)"
+                com = New MySqlCommand(query, conn)
+                adapt.SelectCommand = com
+                adapt.Fill(data)
+                source.DataSource = data
+                DataGridView1.DataSource = source
+                adapt.Update(data)
+                conn.Close()
             Catch ex As Exception
                 MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
             End Try
@@ -185,11 +221,11 @@ Public Class candidate
             Try
                 conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
                 conn.Open()
-                query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName 
-                         FROM ((tbl_candidates 
-                         INNER JOIN position On position.c_pos = tbl_candidates.c_pos) 
-                         INNER JOIN partylist On partylist.ID = tbl_candidates.p_name)
-                         where partylist.`PartyListName`='" & ComboBox1.Text & "' and position.Name='" & ComboBox2.Text & "'"
+                query = "SELECT tbl_candidates.c_name, position.Name, partylist.PartyListName, tbl_candidates.vote
+                    FROM ((tbl_candidates 
+                    INNER JOIN position ON position.c_pos = tbl_candidates.c_pos) 
+                    INNER JOIN partylist on partylist.ID = tbl_candidates.p_name)
+                    where position.Name='" & ComboBox1.Text & "' and partylist.PartyListName='" & ComboBox2.Text & "'"
                 com = New MySqlCommand(query, conn)
                 adapt.SelectCommand = com
                 adapt.Fill(data)
@@ -197,7 +233,6 @@ Public Class candidate
                 DataGridView1.DataSource = source
                 adapt.Update(data)
                 conn.Close()
-
             Catch ex As Exception
                 MessageBox.Show("Error while inserting record on table..." & ex.Message, "Insert Records")
             End Try
@@ -230,11 +265,12 @@ Public Class candidate
         Try
             conn.ConnectionString = "server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none"
             conn.Open()
-            query = "Select tbl_candidates.c_name, position.Name, partylist.PartyListName 
-            FROM ((tbl_candidates 
-            INNER JOIN position On position.c_pos = tbl_candidates.c_pos) 
-            INNER JOIN partylist On partylist.ID = tbl_candidates.p_name) "
+            query = "SELECT tbl_candidates.c_name, position.Name, tbl_candidates.vote, partylist.PartyListName
+                    FROM ((tbl_candidates 
+                    INNER JOIN position ON position.c_pos = tbl_candidates.c_pos) 
+                    INNER JOIN partylist on partylist.ID = tbl_candidates.p_name)"
             com = New MySqlCommand(query, conn)
+
             adapt.SelectCommand = com
             adapt.Fill(data)
             source.DataSource = data
@@ -265,4 +301,5 @@ Public Class candidate
     Private Sub ModifyBttn_Click(sender As Object, e As EventArgs) Handles ModifyBttn.Click
         UpdateCandidate.Show()
     End Sub
+
 End Class

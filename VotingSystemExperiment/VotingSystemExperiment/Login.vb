@@ -8,6 +8,7 @@ Public Class Login
     Public id2 As String
     Public id3 As String
     Public id4 As String
+    Public qwe As String
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         RegisterForm.Show()
     End Sub
@@ -21,7 +22,8 @@ Public Class Login
         conn = New MySqlConnection("server=127.0.0.1; user=root; database=wbvoting; port=3306; SslMode=none")
         Try
             conn.Open()
-            query3 = "SELECT`v_id` FROM `tbl_votingtrail` WHERE `v_id`='" & TextBox1.Text & "'"
+            query3 = "SELECT `user` FROM `tbl_trail` WHERE `user`='" & TextBox1.Text & "'"
+            PartyListView.qwe = TextBox1.Text
             comm = New MySqlCommand(query3, conn)
             READER = comm.ExecuteReader
             Dim count3 As Integer
@@ -99,6 +101,8 @@ Public Class Login
                         End Try
                     Else
                         MessageBox.Show("WRONG USERNAME OR PASSWORD")
+                        TextBox1.Text = Nothing
+                        TextBox2.Text = Nothing
                     End If
                     conn.Close()
                 Catch ex As Exception
@@ -115,7 +119,6 @@ Public Class Login
         End Try
         TextBox1.Text = id
         VotingView.id2 = id
-
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load

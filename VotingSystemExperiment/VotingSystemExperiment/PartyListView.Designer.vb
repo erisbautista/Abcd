@@ -26,6 +26,7 @@ Partial Class PartyListView
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -36,7 +37,7 @@ Partial Class PartyListView
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.DataGridView1)
-        Me.Panel1.Location = New System.Drawing.Point(12, 11)
+        Me.Panel1.Location = New System.Drawing.Point(15, 11)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(350, 400)
         Me.Panel1.TabIndex = 0
@@ -46,9 +47,9 @@ Partial Class PartyListView
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(76, 15)
+        Me.Label1.Location = New System.Drawing.Point(30, 15)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(142, 23)
+        Me.Label1.Size = New System.Drawing.Size(280, 23)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "SUGOD"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -65,12 +66,28 @@ Partial Class PartyListView
         Me.DataGridView1.Size = New System.Drawing.Size(280, 340)
         Me.DataGridView1.TabIndex = 0
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.Button1.Font = New System.Drawing.Font("Times New Roman", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(252, 417)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(110, 50)
+        Me.Button1.TabIndex = 1
+        Me.Button1.Text = "VOTE STRAIGHT"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'PartyListView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(382, 422)
+        Me.ClientSize = New System.Drawing.Size(382, 479)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Panel1)
         Me.Name = "PartyListView"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -84,4 +101,5 @@ Partial Class PartyListView
     Friend WithEvents Panel1 As Panel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
 End Class
